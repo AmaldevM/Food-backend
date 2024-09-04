@@ -2,7 +2,7 @@ const mongoose=require('mongoose');
 
 
 const UserSchema=new mongoose.Schema({
-    FullName:string,
+    FullName:String,
     email:String,
     password:String,
     role: {
@@ -16,7 +16,7 @@ const UserSchema=new mongoose.Schema({
             ref:"Order",
         },
     ],
-    favorites: [{ name: String, desvcription : nString, images: [] }],
+    favorites: [{ name: String, desvcription : String, images: [] }],
     addresses: [
         { 
             type:mongoose.Schema.Types.ObjectId,
@@ -26,5 +26,5 @@ const UserSchema=new mongoose.Schema({
 });
 
 
-const User= mongoose=mongoose.model("User",UserSchema)
+const User=mongoose.model("User",UserSchema)
 module.exports= User;
